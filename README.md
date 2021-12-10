@@ -1,108 +1,234 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# The Restaurant
+![]()
+- [Live Website](https://the-restaurant2021.herokuapp.com/)
+- [Github Repository](https://github.com/jenns93/restaurant_booking_system)
+ # About
+Good food without comprimise
 
-Welcome jenns93,
+View our delicious lunch time & evening menus and book a table now!
+## Table of Contents
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+- [User Experience UX](#User-Experience-UX)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+- [Features](#Features)
 
-## Gitpod Reminders
+- [Technologies Used](#Technologies-Used)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+- [Data Model](#Data-Model)
 
-`python3 -m http.server`
+- [Testing](#Testing)
 
-A blue button should appear to click: _Make Public_,
+- [Deployment](#Deployment)
 
-Another blue button should appear to click: _Open Browser_.
+- [Bugs](#Bugs)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+- [Credits](#Credits)
 
-A blue button should appear to click: _Make Public_,
+## User Experience UX
+### User Stories
+i. As a Site User I want to be able to See available restaurant locations so that I can select which restaurant to book a reservation at.
 
-Another blue button should appear to click: _Open Browser_.
+ii. As a Site User I want to be able to select the particular restaurant so that I can proceed to book a table for my desired location.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+iii. As a Site User I want to be able to open a calendar option so that I can select the date I would like to book a table for.
 
-To log into the Heroku toolbelt CLI:
+iv. As a Site User I want to be able to select a party size so that I can see availability for my booking size.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+v. As a Site User I want to be able to view a list of highlighted available booking times so that I can easily see what times are available for booking.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+vi. As a Site User I want to be able to register an account so that I can manage and make bookings.
 
-------
+vii. As a Site User I want to be able to fill out a prepopulated form with my saved details so that I can book a table is quicker.
 
-## Release History
+viii. As a Site User I want to be able to sign in to my account so that I can book a table and my details are already saved.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+ix. As a Site User I want to be able to ** select to be emailed by the booking site** so that I can receive my booking confirmation with the relevant details.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+x. As a Site User I want to be able to select a Cancel Booking option so that I can cancel unwanted bookings with confirmation by email.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+xi. As a Site User I want to be able to select My Bookings so that I can see a list of all the bookings I have made with details of the booking.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+xii. As a Site User I want to be able to **select amount of tables ** so that I can book multiple tables of a certain amount of people for parties etc.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+xiii. As a Site User I want to be able to select the restaurant menu so that I can read the full dinner and lunch menu.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+xiv. As a Site Admin I want to be able to edit bookings so that I can manage booking system if customer phones to cancel or edit booking instead of doing so online. e.g. (Site not working/Customer does not have capability to use site).
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+## Features
+![Home]()
+- Users are welcomed to the Home page with the availiable restaurant locations listed with their repected address.
+- Users have the option to click the "Menu" link to view lunch and evening menus.
+- Users also have the option to click "Book now" to be taken to the booking section of the website to check for availability.
+- Restaurants listed on home page are also links to google maps to allow user to obtain restaurant location quicker.
+- A "Sign Up" ink is provied in the navigation bar to allow users to create an account to allow them to book a table and store personal data and booking information.
+- A "Login" link is provied in the navigation bar to allow users to sign in with their saved details to create a smoother user exspeiance booking a table. 
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+![Sign Up]()
+- Users will be prompted to create an account by filling in a short form.
+- Users will be required to provide an email address, full name and password.
+- When the form is completed usres can select "Submit" where they will be redirected to the home screen allowing them to now book tables.
+- An email will be sent to user as confimation of creating their account.
+ 
+![My Bookings]()
+- Users will see all their bookings listed on this page with details such as location of restaurant, time/date of bookin and party size.
+- Users will have the option to amend or cancel any of their bookings listed.
+- Users can select "personal details" to amend any of their account details.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+![Log Out]()
+- Users will be asked if they are sure they would like to "Log Out" once before log out is completed
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+![Login]()
+- Users will be asked to provive their email and account password.
+- When required fields are filled the users and select "login" to gain access to their profile and begin using the full ameinities of the website.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+![Personal Details]()
+- Users will have a prepopulated form of their current details that they are free to edit as they wish.
+- Once editing is completed they will have the option to click "save changes".
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+![Cancelations]()
+- The user will have the details of their selected booking displayed with andditional message asking is they are sure they would like to cancel with "Yes/no" options.
+- If "Yes" is selected then a message confirming the cancelation will be displayed and an email sent to the user as well.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+![Booking]()
+- Once a restaurant is selected the user will be taken to the bookings page and will be promted to select a date, party size and tables required.
+- The user will then be shown a list of times availble for their desired date and party size.
+- The time slots will be highlighted if the restaurant is fully booked at that time for the users criteria.
+- Once a availble time slot is select the user will select "Book this table" and will redirected to provied details.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+ ![Booking details]()
+- The user will be presented with a partially prepopulated form with any personal information already stored on their account filled out on the form.
+- The user will be asked to provied addional information that the restaurant may need such as allergies within the party, need of wheelchair access, highchair for infants and any other addional information they would like to provide to improve their customer experiance. 
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+### Future Features
+- Email users with offers and deals.
+- Allow users to add an addition time that is fully booked and emailed if the restaurant has a cancelation for that time slot.
+- Allow users to gain loyalty deals if they book and dine frequently.
 
-------
+## Technologies Used
 
-## FAQ about the uptime script
+### Languages Used
 
-**Why have you added this script?**
+- Python
+- JavaScript
+- Django
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+### Frameworks, libraries, and programs used
 
-**How will this affect me?**
+-[Heroku](https://dashboard.heroku.com/apps) Heroku was used to host the files and to publish the finished program.
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+-[Gitpod](https://www.gitpod.io/) Gitpod was used to code the website and commit changes throughout the development to Github.
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+## Data Model
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+## Testing
 
-**So….?**
+### Functionality Testing
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+### Validator Testing 
+- PEP8. No errors were returned from PEP8online.com
 
-**Can I opt out?**
+### Testing User Stories
+i. As a Site User I want to be able to See available restaurant locations so that I can select which restaurant to book a reservation at.
+1.
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+ii. As a Site User I want to be able to select the particular restaurant so that I can proceed to book a table for my desired location.
+1.
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+iii. As a Site User I want to be able to open a calendar option so that I can select the date I would like to book a table for.
+1.
 
-**Anything more?**
+iv. As a Site User I want to be able to select a party size so that I can see availability for my booking size.
+1.
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+v. As a Site User I want to be able to view a list of highlighted available booking times so that I can easily see what times are available for booking.
+1.
 
----
+vi. As a Site User I want to be able to register an account so that I can manage and make bookings.
+1.
 
-Happy coding!
+vii. As a Site User I want to be able to fill out a prepopulated form with my saved details so that I can book a table is quicker.
+1.
+
+viii. As a Site User I want to be able to sign in to my account so that I can book a table and my details are already saved.
+1.
+
+ix. As a Site User I want to be able to ** select to be emailed by the booking site** so that I can receive my booking confirmation with the relevant details.
+1.
+
+x. As a Site User I want to be able to select a Cancel Booking option so that I can cancel unwanted bookings with confirmation by email.
+1.
+
+xi. As a Site User I want to be able to select My Bookings so that I can see a list of all the bookings I have made with details of the booking.
+1.
+
+xii. As a Site User I want to be able to **select amount of tables ** so that I can book multiple tables of a certain amount of people for parties etc.
+1.
+
+xiii. As a Site User I want to be able to select the restaurant menu so that I can read the full dinner and lunch menu.
+1.
+
+xiv. As a Site Admin I want to be able to edit bookings so that I can manage booking system if customer phones to cancel or edit booking instead of doing so online. e.g. (Site not working/Customer does not have capability to use site).
+1.
+
+## Deployment
+### Heroku
+The program has been deployed using Heroku.
+#### Steps for deployment:
+- Fork or clone the repository.
+- Create a new Heroku app.
+- Set the build backs to Python and Nodejs in this order.
+- Link the Heroku app to the repository.
+- Click Deploy. 
+
+### Forking the GitHub Repository
+To contribute you can Fork without affecting the main branch. Follow the instructions outlined below.
+
+1. Go to GitHub and log in.
+2. Find the Repository that was used for this project.
+3. To the right of the Repository name you will see the 'Fork' button. This is located next to the 'Start' and 'Watch' buttons.
+4. Doing this will place a copy in your own repository.
+5. When you are finished locating the 'New Pull Request' button above the file list on the original repository.
+
+### Cloning
+- To clone or download the repository to your own device follow the instructions listed below.
+
+1. Head to Github and log in.
+2. Find the Repository for this site.
+3. Below the name of the repository find the 'Clone or Download' green button.
+4. To clone the repo using HTTPS click the link below "Clone with HTTPS".
+5. Open your Terminal and go to the directory you want the cloned directory to be copied to.
+6. Enter "Git Clone" and paste the URL copied from GitHub.
+7. Create your local clone by pressing "Enter".
+
+## Bugs
+### Solved Bugs
+### Remaining Bugs
+- No known bugs remaining at time of writing.
+
+## Credits
+
+#### Code
+
+- Code institute 
+- Stackoverflow for tips, examples concepts for further understanding of language definitions.
+- w3schools for tips, examples concepts for further understanding of language definitions.
+- GeeksforGeeks for examples for understanding language better.
+
+#### Content
+
+- All code written by the author - Jack Jenns
+
+- To create the README file inspiration was taken from:
+
+- Code Institute [SampleREADME](https://github.com/Code-Institute-Solutions/SampleREADME)
+- Code Institute [README Template](https://github.com/Code-Institute-Solutions/readme-template)
+- [Markdown cheat sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+
+### Acknowledgements
+- Stackoverflow.
+- Fellow students on slack.
+- My mentor for his guidance.
+- W3schools. 
+- GeeksforGeeks
+
+
