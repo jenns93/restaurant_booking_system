@@ -5,10 +5,10 @@
         <div class="row g-0">
             <div class="col-md-6 masthead-text">
                 <!-- Post title goes in these h1 tags -->
-                <h1 class="post-title">
+                <h1 class="post-title"> {{ post.title }}
                 </h1>
                 <!-- Post author goes before the | the post's created date goes after -->
-                <p class="post-subtitle"> | </p>
+                <p class="post-subtitle"> {{ post.author }} </p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
                 <!-- The featured image URL goes in the src attribute -->
@@ -29,22 +29,9 @@
                 <!-- The post content goes inside the card-text. -->
                 <!-- Use the | safe filter inside the template tags -->
                 <p class="card-text ">
+                    {{ post.excerpt }}
                     {{ post.content | safe }}
                 </p>
-                <div class="row">
-
-                    <div class="col-1">
-                        <!-- The number of likes goes before the closing strong tag -->
-                        <strong class="text-secondary"><i class="far fa-heart"></i> {{ post.number_of_likes }} </strong>
-                    </div>
-                    <div class="col-1">
-                        {% with comments.count as total_comments %}
-                        <strong class="text-secondary"><i class="far fa-comments"></i>
-                            <!-- Our total_comments variable goes before the closing strong tag -->
-                            {{ total_comments }}</strong>
-                        {% endwith %}
-                    </div>
-                </div>
             </div>
         </div>
     </div>

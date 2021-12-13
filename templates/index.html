@@ -11,7 +11,7 @@
             <h4>London</h4>
         </div>
         <div class="col-lg-2 col-sm-6">
-            <a href="book_now.html">Book Now</a>            
+            <a href="{% url 'book_now' %}">Book Now</a>            
         </div>
         <div class="col-lg-8 col-sm-12">
             <h4>Manchester</h4>
@@ -56,8 +56,7 @@
                                 <p class="card-text">{{ post.excerpt }}</p>
                             </a>
                             <hr />
-                            <p class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-heart"></i>
-                                {{ post.number_of_likes }}</p>
+                            <p class="card-text text-muted h6">{{ post.created_on}}</p>
                         </div>
                     </div>
                 </div>

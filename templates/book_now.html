@@ -1,21 +1,41 @@
 {% extends "base.html" %}
 
-
+{% block content %}
 
 <div class="container-fluid">
     <div class="row">
         <div class="col-12">
-            <h3>Book Now</h3>
+            <h3>Book Now:</h3>
         </div>
         <div class="col-lg-8 col-sm-12">
-            <h4>Select a date:</h4>
-        </div>
-        <div class="col-lg-2 col-sm-6">
-            <input type="date" id="start" name="trip-start"
-                value=""
-                min="2021-12-27" max="2022-12-31">
+            <h4>Please Select a date:</h4>
+        </div>        
+    </div>
+    <div class="row">
+        <div class="col-md-10 mt-3 offset-md-1">
+            <a class="btn btn-signup right"  href="{% url 'booking_form' %}">12:00</a>
+            <a class="btn btn-signup right"  href="{% url 'booking_form' %}">12:30</a>
+            <a class="btn btn-signup right"  href="{% url 'booking_form' %}">13:00</a>
+            <a class="btn btn-signup right"  href="{% url 'booking_form' %}">13:30</a>
+            <a class="btn btn-signup right"  href="{% url 'booking_form' %}">14:00</a>
+            <a class="btn btn-signup right"  href="{% url 'booking_form' %}">14:30</a>
+            <a class="btn btn-signup right"  href="{% url 'booking_form' %}">15:00</a>
+            <a class="btn btn-signup right"  href="{% url 'booking_form' %}">15:30</a>
+            <a class="btn btn-signup right"  href="{% url 'booking_form' %}">16:00</a>
+            <a class="btn btn-signup right"  href="{% url 'booking_form' %}">16:30</a>
+            <a class="btn btn-signup right"  href="{% url 'booking_form' %}">17:00</a>
+            <a class="btn btn-signup right"  href="{% url 'booking_form' %}">17:30</a>
+            <a class="btn btn-signup right"  href="{% url 'booking_form' %}">18:00</a>
+            <a class="btn btn-signup right"  href="{% url 'booking_form' %}">18:30</a>
+            <a class="btn btn-signup right"  href="{% url 'booking_form' %}">19:00</a>
+            <a class="btn btn-signup right"  href="{% url 'booking_form' %}">19:30</a>
+            <a class="btn btn-signup right"  href="{% url 'booking_form' %}">20:00</a>
+            <a class="btn btn-signup right"  href="{% url 'booking_form' %}">20:30</a>
+            <a class="btn btn-signup right"  href="{% url 'booking_form' %}">21:00</a>
+            <a class="btn btn-signup right"  href="{% url 'booking_form' %}">21:30</a>
+            <a class="btn btn-signup right"  href="{% url 'booking_form' %}">22:00</a>
         </div>
     </div>
-   
+    
 </div>
 {%endblock%}

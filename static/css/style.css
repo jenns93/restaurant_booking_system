@@ -62,7 +62,7 @@ body {
 }
 
 .masthead-text {
-    background-color: #445261;
+    background-color: #5dd4ca;
     color: white;
     position: relative;
 }
@@ -93,7 +93,7 @@ body {
 
 .post-link:hover,
 .page-link {
-    color: #E84610;
+    color: #10e1e8;
 }
 
 .post-title {
@@ -107,8 +107,9 @@ body {
 }
 
 .btn-signup {
-    background-color: #23BBBB;
+    background-color: #bb23ae;
     color: #fff;
+    margin: 1em;
 }
 
 .btn-signup:hover,

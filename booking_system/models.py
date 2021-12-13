@@ -26,3 +26,18 @@ class Post(models.Model):
     def __str__(self):
         return self.title
  
+class Booking_details(models.Model):
+    date = models.DateTimeField
+    slug = models.SlugField(max_length=200, unique=True)
+    first_name = models.CharField(max_length=40, unique=True)
+    last_name = models.CharField(max_length=40, unique=True)
+    email = models.EmailField(max_length=254)
+    party_size = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(30)])
+    tables = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)])
+    additional_information = models.CharField(max_length=200, unique=True)
+    allergies = models.CharField(max_length=200, unique=True)
+
+    def __str__(self):
+        return f'{self.last_name} party of: {self.party_size}'
+        'book_now.html'
+
